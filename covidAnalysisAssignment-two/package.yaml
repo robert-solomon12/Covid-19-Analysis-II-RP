@@ -1,0 +1,57 @@
+name: covidAnalysisAssignment
+version: 0.5
+description:
+        This package provides source code from the stockquotes example which accompany the book
+        "Haskell in Depth" by Vitaly Bragilevsky (Manning Publications 2020).
+        
+
+category:            Sample Code
+license:             BSD3
+author: Robert Solomon
+
+extra-source-files:
+    - ChangeLog.md
+    - LICENSE
+    - README.md
+    - stack.yaml
+    - package.yaml
+
+
+dependencies: base >=4.12 && <4.15
+  
+
+library:
+  source-dirs: src
+  exposed-modules: 
+    - Charts
+    - HtmlReport
+    - Params
+    - CovidData
+    - StatReport
+
+  dependencies:
+    - bytestring >=0.10 && <0.12
+    - blaze-html >=0.9 && <0.10
+    - optparse-applicative >=0.14 && <0.17
+    - time >=1.8 && <1.12
+    - text >=1.2 && <1.3
+    - fmt >=0.5 && <0.7
+    - Chart >=1.8 && <1.10
+    - Chart-diagrams >=1.8 && <1.10
+    - cassava >=0.5 && <0.6
+    - colonnade >= 1.1 && < 1.3
+    - blaze-colonnade >= 1.1 && < 1.3
+
+executables:
+  covidAnalysisAssignment-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N      
+    dependencies: 
+      - covidAnalysisAssignment
+      - bytestring >=0.10 && <0.12
+      - text >=1.2 && <1.3
+      - cassava >=0.5 && <0.6
