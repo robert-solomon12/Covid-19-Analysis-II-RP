@@ -1,3 +1,3 @@
 # CovidAnalysisAssignment2-RP
 
-Covid-19 Analysis II Assignment developed in Haskell.
+Functional Programmming Assignment-II based on Data gathered from the Covid-19 Virus.
